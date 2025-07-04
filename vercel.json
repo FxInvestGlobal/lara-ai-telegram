@@ -1,0 +1,9 @@
+{
+  "version": 2,
+  "builds": [
+    { "src": "lara_telegram_webhook.py", "use": "@vercel/python" }
+  ],
+  "routes": [
+    { "src": "/(.*)", "dest": "/lara_telegram_webhook.py" }
+  ]
+}
