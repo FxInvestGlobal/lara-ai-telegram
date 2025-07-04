@@ -3,7 +3,9 @@ import requests
 from flask import Flask, request
 
 app = Flask(__name__)
-
+@app.route("/", methods=["GET"])
+def home():
+    return "LARA AI Webhook is running", 200
 # ✅ Set your Telegram bot token and OpenAI API key as environment variables in Render
 TELEGRAM_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
